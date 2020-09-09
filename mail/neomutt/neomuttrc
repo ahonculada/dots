@@ -1,0 +1,97 @@
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+
+set imap_user = "achonculada@knights.ucf.edu"
+set imap_pass = 'Filipino7'
+set from = $imap_user 
+set use_from = yes
+set realname = "Aaron Honculada"
+set folder = imaps://imap-mail.outlook.com:993
+set spoolfile = "+INBOX"
+set postponed = "+Drafts"
+set mail_check = 100
+set header_cache = "~/.neomutt/cache/headers"
+set message_cachedir = "~/.neomutt/cache/bodies"
+set certificate_file = "~/.neomutt/certificates"
+set smtp_url = "smtp://$imap_user@smtp-mail.outlook.com:587"
+set smtp_pass = $imap_pass
+set move = no
+set imap_keepalive = 900
+set record = "+Sent"
+
+set send_charset = "us-ascii:utf-8"
+
+set sort = "threads"
+set strict_threads = "yes"
+set collapse_unread = "no"
+set sort_browser = "reverse-date"
+set sort_aux = "reverse-last-date-received"
+bind index - collapse-thread
+bind index _ collapse-all
+
+
+set editor = "nvim"
+
+# Convenience
+# Jump to archive
+macro index A '<change-folder>!Archive<tab><enter>'
+# Jump to sent
+macro index O '<change-folder>!Sent<tab><enter>'
+# Jump to inbox
+macro index I '<change-folder>!<enter>'
+# Save (tagged or current) to archive
+macro index S ';<save-message>!Archive<tab><enter><enter>'
+# Mark as spam
+macro index ! ';<save-message>!Junk<tab><enter><enter>'
+
+
+# Make deletion non-permanent
+macro index d 's!Trash<enter><enter>' "Move message to trash"
+macro pager d 's!Trash<enter><enter>' "Move message to trash"
+# and expunge explicit
+macro index x '<delete-message>' "Delete message permanently"
+macro pager x '<delete-message>' "Delete message permanently"
+
+
+## Hilights inside the body of a message.
+
+## URLs
+color body red default "((https?|ftp)://|www)[\-\.\;@,/%~_:?&=\#a-zA-Z0-9+*]+"
+color body red default "mailto:[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+
+## Email addresses.
+color body red default "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+
+## Header
+color hdrdefault default default
+color header blue default "^from:"
+color header blue default "^reply-to"
+color header blue default "^subject:"
+
+## Coloring quoted text - coloring the first 7 levels:
+color quoted color243 default
+color quoted1 yellow default
+color quoted2 magenta default
+color quoted3 green default
+color quoted4 color243 default
+color quoted5 yellow default
+color quoted6 magenta default
+color quoted7 green default
+
+## Default color definitions
+color indicator black yellow
+color attachment magenta default
+color error red default
+color message white default
+color search brightwhite magenta
+color status black blue
+color tree brightblue default
+color normal white default
+color tilde brightred default
+color bold brightyellow default
+#color underline magenta default
+color markers brightred default
+
+
+
