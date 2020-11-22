@@ -120,3 +120,11 @@ if ! shopt -oq posix; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+
+# ==============================================================================================
+# Start tmux on every shell login.
+# ==============================================================================================
+# If not running interactively, do not do anything
+[[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux 
