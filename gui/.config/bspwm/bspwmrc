@@ -1,0 +1,39 @@
+#! /bin/sh
+
+
+#### AUTOSTART ####
+sxhkd &
+compton &
+exec polybar -reload main &
+#[ -x ~/.config/polybar/launch.sh ] && ~/.config/polybar/launch.sh &
+feh --bg-max --randomize ~/pictures/DesktopPhotos/* &
+
+bspc monitor HDMI-1 -d I II III IV V VI
+bspc monitor DP-3 -d VII VIII IX X 
+
+bspc config border_width         2
+bspc config window_gap          10
+bspc config top_padding 	20
+bspc config bottom_padding 	0
+
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+#### BSPWM coloring ####
+bspc config normal_border_color		"#4c566a"
+bspc config active_bordr_color		"#1e1e1e"
+bspc config focused_border_color	"#5e81ac"
+bspc config presel_feedback_color	"#5e81c"
+bspc config urgen_border_color		"#dd2727"
+
+bspc config automatic_scheme longest_side
+
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a teamviewer state=floating
