@@ -18,6 +18,7 @@ call plug#begin()
 " GUI enhancements
 " Plug 'morhetz/gruvbox'
 "Plug 'itchyny/lightline.vim'
+Plug 'junegunn/goyo.vim'
 
 " Semantic Language Support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -180,6 +181,11 @@ nmap <silent> gr <Plug>(coc-references)
 
 " <leader><leader> toggles between buffers
 nnoremap <leader><leader> <c-^>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Goyo
+noremap <leader>g :Goyo<CR>
 
 " ==================================================================
 " # Autocommands
