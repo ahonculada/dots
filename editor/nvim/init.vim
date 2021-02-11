@@ -11,18 +11,21 @@ nmap <leader>w :w<CR>
 " # PLUGINS
 " =================================================================
 
+set nocompatible
+
 call plug#begin()
 
 " GUI enhancements
 " Plug 'morhetz/gruvbox'
-Plug 'itchyny/lightline.vim'
+"Plug 'itchyny/lightline.vim'
 
 " Semantic Language Support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sheerun/vim-polyglot'
 
 " Fuzzy Finder
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'junegunn/fzf.vim'
 
 
 call plug#end()
