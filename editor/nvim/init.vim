@@ -24,6 +24,9 @@ Plug 'junegunn/goyo.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 
+" Syntactic Language Support
+Plug 'rust-lang/rust.vim'
+
 " Fuzzy Finder
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'junegunn/fzf.vim'
