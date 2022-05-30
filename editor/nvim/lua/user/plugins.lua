@@ -49,6 +49,8 @@ return packer.startup(function(use)
   use "github/copilot.vim" -- AI Pair programmer
   use 'kyazdani42/nvim-web-devicons' -- Web nvim-web-devicons
   use 'kyazdani42/nvim-tree.lua' -- Tree view for nvim
+  use "akinsho/bufferline.nvim" -- Buffer line
+  use "moll/vim-bbye" 
   use "nvim-lualine/lualine.nvim"
   use "akinsho/toggleterm.nvim"
 
@@ -56,8 +58,7 @@ return packer.startup(function(use)
   use "lunarvim/darkplus.nvim"
 
   -- GUI
-  use "lukas-reineke/indent-blankline.nvim" 
-  use "romgrk/barbar.nvim"
+  use "lukas-reineke/indent-blankline.nvim" -- keep track of indentation 
   
   -- Git
   use "tpope/vim-fugitive"
@@ -68,7 +69,9 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-buffer" -- Completion manager for buffers
   use "hrsh7th/cmp-path" -- Completion manager for paths
   use "hrsh7th/cmp-cmdline" -- Completion manager for commands
+  use "hrsh7th/cmp-nvim-lsp"
   use "saadparwaiz1/cmp_luasnip" -- Completion manager for snippets
+  use "onsails/lspkind-nvim"
 
   -- snippets
   use "L3MON4D3/LuaSnip" -- snippet engine
@@ -77,6 +80,7 @@ return packer.startup(function(use)
   -- LSP 
   use "neovim/nvim-lspconfig" -- LSP support for neovim
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer 
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -88,8 +92,6 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
-  use "p00f/nvim-ts-rainbow"
-  use "nvim-treesitter/playground"
 
   -- Git 
   use "lewis6991/gitsigns.nvim"

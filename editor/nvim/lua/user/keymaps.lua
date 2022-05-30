@@ -37,9 +37,6 @@ keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical +2<CR>", opts)
 
--- Toggle Terminal
-keymap("n", "<leader>t", ":term<CR>", opts)
-
 -- turn off search highlighting
 keymap("n", "<CR>", ":nohlsearch<cr>", opts)
 
@@ -53,6 +50,7 @@ keymap("n", ";", ":", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>p", ":Format<cr>", opts)
 
 -- keep line centered on search/join
 keymap("n", "n", "nzz", opts)
