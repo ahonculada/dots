@@ -19,13 +19,18 @@ call plug#begin()
 Plug 'gruvbox-community/gruvbox'
 "Plug 'itchyny/lightline.vim'
 "Plug 'junegunn/goyo.vim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Semantic Language Support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'williamboman/nvim-lsp-installer'
 "Plug 'sheerun/vim-polyglot'
+Plug 'github/copilot.vim'
 
 
 " Syntactic Language Support
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Plug 'rust-lang/rust.vim'
 "Plug 'pangloss/vim-javascript'
 "Plug 'leafgarland/typescript-vim'
